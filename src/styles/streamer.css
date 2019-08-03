@@ -1,0 +1,72 @@
+.streamer-logo{
+    width: 160px;
+    height: 160px;
+}
+.streamer-top{
+    width: 100%;
+    padding: 35px 35px 0px 35px;    
+}
+.streamer-profile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.streamer-profile-text{
+    padding-left: 35px;
+    height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.streamer-profile-name{
+    display: flex;
+}
+.streamer-profile-name>div:first-child{
+    font-size: 2.2rem;
+    font-weight: bold;
+}
+.streamer-profile-name>div:last-child{
+    font-size: 1.6rem;
+    font-weight: bold;    
+}
+.streamer-profile-desc{
+    width: 480px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;      
+}
+.streamer-status{
+    display: flex;
+    padding: 35px 10px 10px 10px;
+    flex-wrap: wrap;
+}
+.streamer-status>div{
+    width: 270px;
+}
+.streamer-status>div>div:first-child{
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.streamer-status>div>div:last-child{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.streamer-bottom-text{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.streamer-bottom-videoList{
+    display: flex;
+    flex-wrap: wrap;
+}
+.streamer-bottom-text{
+    padding: 0px 12.5px 0px 40px;
+}
+.streamer-bottom-videoList{
+    padding: 12.5px 12.5px 12.5px 12.5px;    
+}

@@ -1,0 +1,18 @@
+.submain-logo-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.submain-logo-img{
+    width: 250px;
+    height: 200px;
+}
+.submain-logo-text{
+    font-size: 3.75rem;
+}
+.submain-logo-img-sorry{
+    width: 350px;
+    height: 200px;    
+}

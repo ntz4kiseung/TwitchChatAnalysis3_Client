@@ -1,0 +1,14 @@
+.video-item-img{
+    width: 365px;
+    height: 205px;
+}
+.video-item{
+    padding: 12.5px 12.5px 12.5px 12.5px;    
+}
+.video-item-title{
+    margin-top: 10px;
+    font-weight: bold;
+}
+.video-top{
+    padding: 25px 25px 0px 25px;
+}

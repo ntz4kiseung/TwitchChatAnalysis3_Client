@@ -1,0 +1,28 @@
+.main-logo-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10vh;
+}
+.main-logo-img{
+    width: 130px;
+    height: 130px;
+}
+.main-logo-text{
+    font-size: 3.75rem;
+    color: rgb(100, 65, 164);
+}
+.main-contents{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main-contents-input{
+    width: 45vw;
+}
+.main-contents-text{
+    font-size: 1.875rem;
+    margin-bottom: 15px;
+    text-align: center;
+}

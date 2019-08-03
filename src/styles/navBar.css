@@ -1,0 +1,27 @@
+.navbar{
+    background-color: rgb(100, 65, 164);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0px 10px 0px 5px;
+}
+.navbar-logo-box{
+    display: flex;
+}
+.navbar-logo-img{
+    height: 60px;
+    width: 60px;
+}
+.navbar-logo-text{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.8rem;
+    color: white;
+}
+.navbar-search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
