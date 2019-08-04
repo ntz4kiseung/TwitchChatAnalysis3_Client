@@ -1,15 +1,19 @@
-import React from 'react';
+import React, {Fragment} from 'react';
+import {Provider} from 'react-redux';
+import {BrowserRouter as Router} from 'react-router-dom';
+import store from '../store';
 import NavBar from './NavBar';
 import RouteViews from './RouteViews';
-import {BrowserRouter as Router} from 'react-router-dom';
 
 const App = () => (
-    <div>
+    <Provider store={store}>
         <Router>
-            <NavBar></NavBar>
-            <RouteViews></RouteViews>
+            <Fragment>
+                <NavBar></NavBar>
+                <RouteViews></RouteViews>
+            </Fragment>
         </Router>
-    </div>
+    </Provider>
 )
 
 // arrow function에서 

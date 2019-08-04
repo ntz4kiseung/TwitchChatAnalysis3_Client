@@ -1,13 +1,21 @@
 import React from 'react';
-import videoSample from '../img/videoSample.png';
+import {Link} from 'react-router-dom';
 
-const VideoItem = () => (
-    <div className="video-item">
-        <div className="video-item-img">
-            <img src={videoSample} alt=""/>
+const VideoItem = ({thumbnail, title, videoId}) => {
+    var video = {videoId}.videoId;
+    if(video[0]==='v'){
+        video = video.slice(1);
+    }
+    const link = `../video/${video}`;
+    return(
+    <Link className="onClickLink" to={link} >
+        <div className="video-item">
+            <div className="video-item-img">
+                <img src={thumbnail} alt=""/>
+            </div>
+            <div className="video-item-title">{title}</div>
         </div>
-        <div className="video-item-title">제목 샘플 텍스트입니다.</div>
-    </div>
-);
+    </Link>
+)};
 
 export default VideoItem;

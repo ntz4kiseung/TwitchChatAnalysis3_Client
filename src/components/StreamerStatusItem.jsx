@@ -1,7 +1,7 @@
 import React from 'react';
 
 const StreamerStatusItem = ({title, value}) => (
-    <div class="">
+    <div className="">
         <div>
             {title}
         </div>

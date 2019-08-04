@@ -18,14 +18,14 @@ const RouteViews = () => (
             ></Route>
             <Route
                 exact
-                path='/streamer'
-                render={()=>(
-                    <Streamer></Streamer>
+                path='/streamer/:userName'
+                render={(props)=>(
+                    <Streamer {...props}></Streamer>
                 )}
             ></Route>
             <Route
                 exact
-                path='/video'
+                path='/video/:videoId'
                 render={()=>(<div>video</div>)}
             ></Route>
             <Route

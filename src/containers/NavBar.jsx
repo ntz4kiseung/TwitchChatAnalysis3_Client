@@ -1,6 +1,7 @@
 import React from 'react';
-import Logo1 from '../img/Logo1.png'
+import Logo1 from '../img/Logo1.png';
 import {Link} from 'react-router-dom';
+import tca3Search from '../js/tca3';
 
 const NavBar = () => (
     <div className="navbar">
@@ -16,9 +17,9 @@ const NavBar = () => (
         </Link>
         <div className="navbar-search">
             <div className="input-group">
-                <input type="text" className="form-control" placeholder="Streamer Id or Video Id" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <input type="text" name="searchInput" className="form-control" placeholder="Streamer Id or Video Id" aria-label="Recipient's username" aria-describedby="button-addon2" />
                 <div className="input-group-append">
-                <button className="btn btn-outline-light" type="button" id="button-addon2">Button</button>
+                    <button className="btn btn-outline-light" type="button" id="button-addon2" onClick={tca3Search}>Search</button>
                 </div>
             </div>
         </div>
