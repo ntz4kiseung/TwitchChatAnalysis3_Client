@@ -5,6 +5,7 @@ import StreamerNotFound from '../pages/StreamerNotFound';
 import VideoNotFound from '../pages/VideoNotFound';
 import NotAnalyzedVideo from '../pages/NotAnalyzedVideo';
 import Streamer from '../pages/Streamer';
+import Video from '../pages/Video';
 
 const RouteViews = () => (
     <div className="canvas">
@@ -26,7 +27,9 @@ const RouteViews = () => (
             <Route
                 exact
                 path='/video/:videoId'
-                render={()=>(<div>video</div>)}
+                render={(props)=>(
+                    <Video {...props}></Video>
+                )}
             ></Route>
             <Route
                 exact

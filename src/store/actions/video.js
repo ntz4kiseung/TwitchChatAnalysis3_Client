@@ -11,7 +11,7 @@ export const setVideo = video => ({
 export const getVideo = (path) => {
     return async dispatch => {
         try{
-            const video = await tca3API.call('get', path);
+            const video = await tca3API.call('get', `video/search/${path}`);
             dispatch(setVideo(video));
         }catch(err){
             console.log(err);
