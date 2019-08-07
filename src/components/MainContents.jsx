@@ -1,4 +1,5 @@
 import React from 'react';
+import tca3Search from '../js/tca3';
 
 const MainContents = ({desc}) => (
     <div className="main-contents">
@@ -9,9 +10,9 @@ const MainContents = ({desc}) => (
         </div>
         <div className="main-contents-input">
             <div className="input-group input-group-lg">
-                <input type="text" className="form-control" placeholder="Streamer Id or Video Id" aria-label="Recipient's username" aria-describedby="button-addon2" />
+                <input type="text" name="searchInput"  className="form-control" placeholder="Streamer Id or Video Id" aria-label="Recipient's username" aria-describedby="button-addon2" />
                 <div className="input-group-append">
-                    <button className="btn btn-outline-purple" type="button" id="button-addon2">Search</button>
+                    <button className="btn btn-outline-purple" onClick={tca3Search} type="button" id="button-addon2">Search</button>
                 </div>
             </div>
         </div>

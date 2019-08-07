@@ -7,8 +7,6 @@ import {getStreamer} from '../store/actions';
 // match는 예약어인가? 다른거 쓰니까 오류나네
 class Streamer extends Component{
     componentWillMount(){
-        console.log('전');
-        console.log('userName: ', this.props.match.params.userName);
         const {getStreamer} = this.props;
         getStreamer(this.props.match.params.userName);
     }
