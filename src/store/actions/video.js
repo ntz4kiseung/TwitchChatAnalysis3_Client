@@ -32,12 +32,17 @@ export const getVideoWithKeyword = (path) => {
 };
 
 // path = video/save/:videoId
-export const saveVideo = (path) => {
-    return async dispatch => {
-        try{
-            await tca3API.call('get', path);
-        }catch(err){
-            console.log(err);
-        }
-    }
+export const saveVideo = async (path) => {
+    // 저장하고 다 되면 비디오 창으로 보내기
+    await tca3API.call('get', `video/save/${path}`);
+    window.location.href = `http://localhost:3000/video/${path}`;
+    // return async dispatch => {
+    //     try{
+    //         console.log('세이브 액션 호출');
+    //         await tca3API.call('get', `video/save/${path}`);c
+    //     }catch(err){
+    //         console.log('세이브 액션 에러남');
+    //         console.log(err);
+    //     }
+    // }
 };

@@ -1,7 +1,5 @@
 const search = (obj) => {
-    const keyword = document.getElementsByName("searchInput")[0].value;
-    console.log(obj);
-    console.log(keyword);
+    const keyword = obj.target.parentElement.parentElement.childNodes[0].value;
     if(keyword==="" || keyword==null){
         return false;
     }
@@ -9,7 +7,7 @@ const search = (obj) => {
     if(regex.test(keyword)){
         window.location.href=`http://localhost:3000/streamer/${keyword}`;        
     }else{
-        window.location.href=`http://localhost:3000/video/search/${keyword}`;
+        window.location.href=`http://localhost:3000/video/${keyword}`;
     }
     return false;
 }

@@ -6,12 +6,18 @@ import {getStreamer} from '../store/actions';
 
 // match는 예약어인가? 다른거 쓰니까 오류나네
 class Streamer extends Component{
-    componentWillMount(){
+    async componentWillMount(){
         const {getStreamer} = this.props;
-        getStreamer(this.props.match.params.userName);
-    }
+        await getStreamer(this.props.match.params.userName);
 
+        const {name, userName} = this.props;
+        if(name==='StreamerNotFound'){
+            window.location.href=`http://localhost:3000/streamernotfound/${this.props.match.params.userName}`;
+        } 
+    }
+    
     render(){
+        
         console.log('this.props :', this.props);
         return (
             <div className="body-background">
@@ -25,4 +31,8 @@ class Streamer extends Component{
     }
 }
 
-export default connect(store=>({}), {getStreamer})(Streamer);
+export default connect(store=>{
+    return {
+        name: store.streamer.name
+    }
+}, {getStreamer})(Streamer);

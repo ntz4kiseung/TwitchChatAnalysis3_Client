@@ -16,12 +16,12 @@ const NavBar = () => (
             </div>
         </Link>
         <div className="navbar-search">
-            <div className="input-group">
+            <form className="input-group">
                 <input type="text" name="searchInput" className="form-control" placeholder="Streamer Id or Video Id" aria-label="Recipient's username" aria-describedby="button-addon2" />
                 <div className="input-group-append">
-                    <button className="btn btn-outline-light" type="button" id="button-addon2" onClick={tca3Search}>Search</button>
+                    <button className="btn btn-outline-light" type="button" id="button-addon2" onClick={tca3Search.bind(this)}>Search</button>
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 )

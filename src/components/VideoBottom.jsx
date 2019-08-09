@@ -10,14 +10,12 @@ const VideoBottom = ({video}) => {
         if(data.video.type==='FoundVideo'){
             const comments = data.video.video.comments;
             var chartData = {
-                labels : comments.map(comment => comment.seconds),
+                labels : comments.map(comment => comment.seconds/60+"분"),
                 datasets : [
                     {
                         label: null,
-                        backgroundColor: 'rgb(255,0,0)',
-                        borderColor: 'rgba(1,99,132,1)',
-                        hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-                        hoverBorderColor: 'rgba(255,99,132,1)',
+                        backgroundColor: 'rgba(100, 65, 164, 0.3)',
+                        borderColor: 'rgb(100, 65, 164)',
                         data : comments.map(comment => comment.counting)
                     }
                 ]
@@ -27,7 +25,7 @@ const VideoBottom = ({video}) => {
 
     return (
     <div className="video-bottom">
-        {data.video.video && <Bar data={chartData}></Bar>}
+        {data.video.video && <Line data={chartData}></Line>}
     </div>
 )};
 

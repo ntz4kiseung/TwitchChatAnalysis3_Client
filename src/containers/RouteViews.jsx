@@ -33,23 +33,23 @@ const RouteViews = () => (
             ></Route>
             <Route
                 exact
-                path='/streamernotfound'
-                render={()=>(
-                    <StreamerNotFound></StreamerNotFound>
+                path='/streamernotfound/:userName'
+                render={(props)=>(
+                    <StreamerNotFound {...props}></StreamerNotFound>
                 )}
             ></Route>
             <Route
                 exact
-                path='/videonotfound'
-                render={()=>(
-                    <VideoNotFound></VideoNotFound>
+                path='/videonotfound/:videoId'
+                render={(props)=>(
+                    <VideoNotFound {...props}></VideoNotFound>
                 )}
             ></Route>
             <Route
                 exact
-                path='/notanalyzedvideo'
-                render={()=>(
-                    <NotAnalyzedVideo></NotAnalyzedVideo>
+                path='/notanalyzedvideo/:videoId'
+                render={(props)=>(
+                    <NotAnalyzedVideo {...props}></NotAnalyzedVideo>
                 )}
             ></Route>                                                                                
         </Switch>

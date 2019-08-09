@@ -8,20 +8,21 @@ class Video extends Component{
     
     async componentWillMount(){
         const {getVideo} = this.props;
-        getVideo(this.props.match.params.videoId);
-        var {type} =this.props;
+        await getVideo(this.props.match.params.videoId);
+        var {type, videoId} =this.props;
         if(type==='FoundVideo'){
-            console.log('비디오 찾음')
+            console.log('비디오 찾음');
         }else if(type==='NotFoundVideo'){
-            console.log('비디오 없으니 페이지 이동');
+            window.location.href=`http://localhost:3000/videonotfound/${videoId}`;
         }else if(type==='NotAnalyedVideo'){
-            console.log('비디오 분석 안됨 페이지 이동');
+            window.location.href=`http://localhost:3000/notanalyzedvideo/${videoId}`;
         }else if(type==='SearchKeyword'){
             console.log('얘는 어떻게 해야됨');
         }
     }
 
     render(){
+        
         return (
             <div className="body-background">
                 <div className="body">
@@ -34,6 +35,12 @@ class Video extends Component{
     }
 }
 
-export default connect(store=>({
-    type: store.video.type
-}), {getVideo})(Video);
+export default connect((store)=>{
+        if(store.video.video){
+            var videoId = store.video.video.videoId 
+        }
+    return ({
+        type: store.video.type,
+        videoId: videoId
+    })
+}, {getVideo})(Video);
